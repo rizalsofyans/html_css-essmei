@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+body {
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+	line-height: 1.3;
+	background-color: #f4f4f4;
+	color: #000;
+}
+
+img {
+	width: 100%;
+}
+
+header {
+	background-color: #000;
+	border-top: 5px solid #feea34;
+}
+
+header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header h1 img {
+	width: 72px;
+}
+
+header nav a img {
+	width: 40px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.hero {
+	background-image: url('images/hero.jpg');
+	padding: 120px 0;
+	background-size: cover;
+	background-position: right bottom;
+	margin-bottom: 32px;
+}
+
+.hero h2 {
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.hero p {
+	font-size: 24px;
+}
+
+.intro {
+	max-width: 480px;
+}
+
+.filters {
+	margin-bottom: 16px;
+}
+
+.filters a {
+	color: #000;
+	font-size: 16px;
+	margin-right: 16px;
+}
+
+.filters .selected {
+	font-weight: 700;
+	border-bottom: 3px solid #feea34;
+	padding-bottom: 1px;
+}
+
+.products {
+	display: flex;
+	justify-content: center;
+	margin: 0 20px;
+}
+
+.products .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+.product {
+	position: relative;
+}
+
+.product img {
+	clear: both;
+	display: block;
+}
+
+.overlay {
+	opacity: 0;
+	position: absolute;
+	background-color: rgba(254, 234, 52, 0.75);
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product:hover .overlay {
+	opacity: 1;
+}
+
+.product h4,
+.product p {
+	font-weight: 700;
+	position: absolute;
+	bottom: 16px;
+	left: 16px;
+}
+
+.product p {
+	font-size: 36px;
+}
+
+.product h4 {
+	font-size: 18px;
+	top: 16px;
+}
+
+@media screen and (max-width: 768px) {
+	.hero {
+		padding-top: 56px;
+		padding-bottom: 64px;
+	}
+
+	.filters .container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.products .container {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.products {
+		margin: 0 20px;
+	}
+}
